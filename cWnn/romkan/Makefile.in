@@ -1,5 +1,5 @@
 #
-# $Id: Makefile.in,v 1.1 2000/01/16 05:11:19 ura Exp $
+# $Id: Makefile.in,v 1.1.1.1 2000/01/16 05:11:19 ura Exp $
 #
 
 # FreeWnn is a network-extensible Kana-to-Kanji conversion system.
