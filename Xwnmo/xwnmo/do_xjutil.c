@@ -1,5 +1,5 @@
 /*
- * $Id: do_xjutil.c,v 1.1 2000/01/16 05:07:56 ura Exp $
+ * $Id: do_xjutil.c,v 1.1.1.1 2000/01/16 05:07:56 ura Exp $
  */
 
 /*

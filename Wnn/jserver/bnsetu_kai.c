@@ -1,5 +1,5 @@
 /*
- * $Id: bnsetu_kai.c,v 1.1 2000/01/16 05:07:45 ura Exp $
+ * $Id: bnsetu_kai.c,v 1.1.1.1 2000/01/16 05:07:45 ura Exp $
  */
 
 /*

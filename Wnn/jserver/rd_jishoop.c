@@ -1,5 +1,5 @@
 /*
- * $Id: rd_jishoop.c,v 1.1 2000/01/16 05:07:45 ura Exp $
+ * $Id: rd_jishoop.c,v 1.1.1.1 2000/01/16 05:07:45 ura Exp $
  */
 
 /*

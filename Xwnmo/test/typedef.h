@@ -1,5 +1,5 @@
 /*
- * $Id: typedef.h,v 1.1 2000/01/16 05:07:53 ura Exp $
+ * $Id: typedef.h,v 1.1.1.1 2000/01/16 05:07:53 ura Exp $
  */
 
 /*

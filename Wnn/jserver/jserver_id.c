@@ -1,5 +1,5 @@
 #ifndef lint
-static char *rcs_id = "$Id: jserver_id.c,v 1.1 2000/01/16 05:07:45 ura Exp $";
+static char *rcs_id = "$Id: jserver_id.c,v 1.1.1.1 2000/01/16 05:07:45 ura Exp $";
 #endif /* lint */
 /*
  * FreeWnn is a network-extensible Kana-to-Kanji conversion system.

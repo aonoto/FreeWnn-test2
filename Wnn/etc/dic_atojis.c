@@ -1,5 +1,5 @@
 /*
- * $Id: dic_atojis.c,v 1.1 2000/01/16 05:07:44 ura Exp $
+ * $Id: dic_atojis.c,v 1.1.1.1 2000/01/16 05:07:44 ura Exp $
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: display.c,v 1.1 2000/01/16 05:07:55 ura Exp $
+ * $Id: display.c,v 1.1.1.1 2000/01/16 05:07:55 ura Exp $
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: ximdispt.c,v 1.1 2000/01/16 05:07:57 ura Exp $
+ * $Id: ximdispt.c,v 1.1.1.1 2000/01/16 05:07:57 ura Exp $
  */
 
 /*

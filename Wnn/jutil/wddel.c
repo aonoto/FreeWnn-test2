@@ -1,5 +1,5 @@
 #ifndef lint
-static char *rcs_id = "$Id: wddel.c,v 1.1 2000/01/16 05:07:46 ura Exp $";
+static char *rcs_id = "$Id: wddel.c,v 1.1.1.1 2000/01/16 05:07:46 ura Exp $";
 #endif /* lint */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: xext.h,v 1.1 2000/01/16 05:07:53 ura Exp $
+ * $Id: xext.h,v 1.1.1.1 2000/01/16 05:07:53 ura Exp $
  */
 /*
  * FreeWnn is a network-extensible Kana-to-Kanji conversion system.

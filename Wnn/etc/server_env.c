@@ -1,5 +1,5 @@
 /*
- * $Id: server_env.c,v 1.1 2000/01/16 05:07:45 ura Exp $
+ * $Id: server_env.c,v 1.1.1.1 2000/01/16 05:07:45 ura Exp $
  */
 
 /*

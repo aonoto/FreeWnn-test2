@@ -1,5 +1,5 @@
 /*
- * $Id: cvtcode.h,v 1.1 2000/01/16 05:07:51 ura Exp $
+ * $Id: cvtcode.h,v 1.1.1.1 2000/01/16 05:07:51 ura Exp $
  */
 
 /*

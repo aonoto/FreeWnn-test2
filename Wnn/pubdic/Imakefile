@@ -1,5 +1,5 @@
 XCOMM
-XCOMM $Id: Imakefile,v 1.1 2000/01/16 05:07:50 ura Exp $
+XCOMM $Id: Imakefile,v 1.1.1.1 2000/01/16 05:07:50 ura Exp $
 XCOMM
 
 XCOMM FreeWnn is a network-extensible Kana-to-Kanji conversion system.
