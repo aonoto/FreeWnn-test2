@@ -1,5 +1,5 @@
 /*
- * $Id: de_header.h,v 1.1 2000/01/16 05:07:45 ura Exp $
+ * $Id: de_header.h,v 1.2 2000/01/16 07:30:02 ura Exp $
  */
 
 /*
@@ -30,8 +30,10 @@
  * Commentary:
  *
  * Change log:
+ *	'99/03/20	ÊÒ»³¡÷£Ð£Æ£Õ <kate@pfu.co.jp>
+ *		´Ø¿ô puts_n_cur(p,n) ¤ÎÄÉ²Ã¡£
  *
- * Last modified date: 8,Feb.1999
+ * Last modified date: 20,Mar.1999
  *
  * Code:
  *
@@ -230,6 +232,7 @@ extern int get2_cur();
 extern int get4_cur();
 extern int getc_cur();
 extern void puts_cur();
+extern void puts_n_cur();
 extern void putws_cur();
 extern void putnws_cur();
 extern void put2_cur();
@@ -496,7 +499,7 @@ extern int wnn_hinsi_number();
 extern int wnn_hinsi_list();
 extern int wnn_has_hinsi();
 extern int wnn_find_hinsi_by_name();
-extern int wnn_get_hinsi_name();
+extern char *wnn_get_hinsi_name();
 extern int wnn_get_fukugou_component_body();
 extern int wnn_get_fukugou_component();
 /* bdic.c */
