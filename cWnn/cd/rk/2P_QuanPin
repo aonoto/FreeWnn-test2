@@ -1,7 +1,8 @@
 ;
-; $Id: 2P_QuanPin,v 1.1.2.1 1999/02/08 05:21:16 yamasita Exp $
+;   $Id: ./2P_QuanPin $
 ;
 
+;
 ; FreeWnn is a network-extensible Kana-to-Kanji conversion system.
 ; This file is part of FreeWnn.
 ; 
@@ -9,37 +10,32 @@
 ;                 1987, 1988, 1989, 1990, 1991, 1992
 ; Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
 ; Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
-;
-; Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
-;
+; Copyright FreeWnn Project 1999, 2000
+; 
+; Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+; 
 ; This program is free software; you can redistribute it and/or modify
 ; it under the terms of the GNU General Public License as published by
-; the Free Software Foundation; either version 2, or (at your option)
-; any later version.
-;
+; the Free Software Foundation; either version 2 of the License, or
+; (at your option) any later version.
+; 
 ; This program is distributed in the hope that it will be useful,
 ; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ; GNU General Public License for more details.
-;
+; 
 ; You should have received a copy of the GNU General Public License
-; along with GNU Emacs; see the file COPYING.  If not, write to the
-; Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-;
-; Commentary:
-;
-; Change log:
-;
-; Last modified date: 8,Feb.1999
+; along with this program; if not, write to the Free Software
+; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ;
 
 (defvar A  	(list B C D F G H   K L M N P     S T W   Y Z  ))
 (defvar AI  	(list B C D   G H   K L M N P     S T W     Z  ))
 (defvar AN  	(list B C D F G H   K L M N P   R S T W   Y Z  )) ;ANG
-(defvar AO  	(list B C D   G H   K L M N P   R S T W   Y Z  ))
+(defvar AO  	(list B C D   G H   K L M N P   R S T     Y Z  ))
 (defvar E  	(list   C D   G H   K L M N     R S T     Y Z  ))
 (defvar EI  	(list B C D F G H   K L M N P       T W     Z  ))
-(defvar EN  	(list B C   F G H   K   M N P   R S   W     Z  )) ;den;
+(defvar EN  	(list B C D F G H   K   M N P   R S   W     Z  ))
 (defvar ENG  	(list B C D F G H   K L M N P   R S T W     Z  ))
 (defvar I  	(list B C D       J   L M N P Q R S T   X Y Z  ))
 (defvar IA  	(list     D       J   L       Q         X      )) ;nia;
@@ -157,6 +153,11 @@
 (CSZ)HU2	(CSZ)hé≤é¿
 (CSZ)HU3	(CSZ)hé≥é¿
 (CSZ)HU4	(CSZ)hé¥é¿
+(CSZ)HUA	(CSZ)huaé¿
+(CSZ)HUA1	(CSZ)hué°é¿
+(CSZ)HUA2	(CSZ)hué¢é¿
+(CSZ)HUA3	(CSZ)hué£é¿
+(CSZ)HUA4	(CSZ)hué§é¿
 (CSZ)HUAI	(CSZ)huaié¿
 (CSZ)HUAI1	(CSZ)hué°ié¿
 (CSZ)HUAI2	(CSZ)hué¢ié¿
@@ -372,11 +373,11 @@ EN1		é•né¿
 EN2		é¶né¿
 EN3		éßné¿
 EN4		é®né¿
-;ENG		engé¿
-;ENG1		é•ngé¿
-;ENG2		é¶ngé¿
-;ENG3		éßngé¿
-;ENG4		é®ngé¿
+ENG		engé¿
+ENG1		é•ngé¿
+ENG2		é¶ngé¿
+ENG3		éßngé¿
+ENG4		é®ngé¿
 ER		eré¿
 ER1		é•ré¿
 ER2		é¶ré¿
@@ -397,11 +398,6 @@ SHEI1		Shé•ié¿
 SHEI2		Shé¶ié¿
 SHEI3		Shéßié¿
 SHEI4		Shé®ié¿
-SHUA		Shuaé¿
-SHUA1		Shué°é¿
-SHUA2		Shué¢é¿
-SHUA3		Shué£é¿
-SHUA4		Shué§é¿
 ZHEI		Zheié¿
 ZHEI1		Zhé•ié¿
 ZHEI2		Zhé¶ié¿
@@ -412,13 +408,8 @@ ZHONG1		Zhé≠ngé¿
 ZHONG2		ZhéÆngé¿
 ZHONG3		ZhéØngé¿
 ZHONG4		Zhé∞ngé¿
-ZHUA		Zhuaé¿
-ZHUA1		Zhué°é¿
-ZHUA2		Zhué¢é¿
-ZHUA3		Zhué£é¿
-ZHUA4		Zhué§é¿
 ;;;;			-----------Special PinYin-------------
-;HM		Hmé¿
+HM		Hmé¿
 HNG		Hngé¿
 NG		ngé¿
 M		mé¿

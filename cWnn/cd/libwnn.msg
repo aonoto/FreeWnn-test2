@@ -1,37 +1,33 @@
 #
-# $Id: libwnn.msg,v 1.2.2.1 1999/02/08 05:21:04 yamasita Exp $
+#   $Id: ./libwnn.msg $
 #
 
-### FreeWnn is a network-extensible Kana-to-Kanji conversion system.
-### This file is part of FreeWnn.
-### 
-### Copyright Kyoto University Research Institute for Mathematical Sciences
-###                 1987, 1988, 1989, 1990, 1991, 1992
-### Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
-### Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
-###
-### Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
-###
-### This program is free software; you can redistribute it and/or modify
-### it under the terms of the GNU General Public License as published by
-### the Free Software Foundation; either version 2, or (at your option)
-### any later version.
-###
-### This program is distributed in the hope that it will be useful,
-### but WITHOUT ANY WARRANTY; without even the implied warranty of
-### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-### GNU General Public License for more details.
-###
-### You should have received a copy of the GNU General Public License
-### along with GNU Emacs; see the file COPYING.  If not, write to the
-### Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-###
-### Commentary:
-###
-### Change log:
-###
-### Last modified date: 8,Feb.1999
-###
+#
+# FreeWnn is a network-extensible Kana-to-Kanji conversion system.
+# This file is part of FreeWnn.
+# 
+# Copyright Kyoto University Research Institute for Mathematical Sciences
+#                 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+# Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright FreeWnn Project 1999, 2000
+# 
+# Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
 
 ###	massage file for libwnn.a
 ### wnnerrmsg.c
@@ -60,7 +56,7 @@
 #22	no_error 22
 #23	no_error 23
 24	文法文件的内容不正确
-25	虚拟词性号码异常hinsi.data不正确。
+25	虚拟词性号码异常cixing.data不正确。
 26	未定义的词性、定义了前端词性。
 27	文法文件不能读取。
 #28	no_error 28
@@ -70,7 +66,7 @@
 32	附属语解析域不够。
 #33	no_error 33
 34	次侯补域不够。
-35	侯补 1个也没有 
+35	侯补 1个也没有
 #36	no_error 36
 #37	no_error 37
 #38	no_error 38
@@ -130,8 +126,8 @@
 92	不是ｃＷｎｎ用户可读取的文件。
 93	以上的文件不能读取。
 94	password不对。
-95	文件正在读取。 
-96	文件不能消除。 
+95	文件正在读取。
+96	文件不能消除。
 97	文件没有创建出来。
 98	不是ｃＷｎｎ的文件。
 99	文件的I-node和FILE_UNIQ不能一致。

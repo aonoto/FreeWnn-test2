@@ -1,40 +1,36 @@
-###
-### $Id: libwnn.msg,v 1.1.2.1 1999/02/08 02:58:21 yamasita Exp $
-###
+#
+#   $Id: ./libwnn.msg $
+#
 
-### FreeWnn is a network-extensible Kana-to-Kanji conversion system.
-### This file is part of FreeWnn.
-### 
-### Copyright Kyoto University Research Institute for Mathematical Sciences
-###                 1987, 1988, 1989, 1990, 1991, 1992
-### Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
-### Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
-###
-### Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
-###
-### This program is free software; you can redistribute it and/or modify
-### it under the terms of the GNU General Public License as published by
-### the Free Software Foundation; either version 2, or (at your option)
-### any later version.
-###
-### This program is distributed in the hope that it will be useful,
-### but WITHOUT ANY WARRANTY; without even the implied warranty of
-### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-### GNU General Public License for more details.
-###
-### You should have received a copy of the GNU General Public License
-### along with GNU Emacs; see the file COPYING.  If not, write to the
-### Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-###
-### Commentary:
-###
-### Change log:
-###
-### Last modified date: 8,Feb.1999
-###
+#
+# FreeWnn is a network-extensible Kana-to-Kanji conversion system.
+# This file is part of FreeWnn.
+# 
+# Copyright Kyoto University Research Institute for Mathematical Sciences
+#                 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+# Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright FreeWnn Project 1999, 2000
+# 
+# Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
 
-###	massage file for libwnn.a
-### wnnerrmsg.c
+#	massage file for libwnn.a
+# wnnerrmsg.c
 #0	no_error 0
 1	ファイルが存在しません。
 #2	no_error 2
@@ -59,7 +55,7 @@
 #21	no_error 21
 #22	no_error 22
 #23	no_error 23
-24	付属語ファイルの内容が正しくありません
+24	付属語ファイルの内容が正しくありません。
 25	疑似品詞番号が異常ですhinsi.dataが正しくありません。
 26	未定義の品詞が前端品詞として定義されています。
 27	付属語ファイルが読み込まれていません。
@@ -70,7 +66,7 @@
 32	付属語解析領域が不足しています。
 #33	no_error 33
 34	次候補領域が不足しています。
-35	候補が 1 つも作れませんでした 
+35	候補が 1 つも作れませんでした。
 #36	no_error 36
 #37	no_error 37
 #38	no_error 38
@@ -130,8 +126,8 @@
 92	クライアントの読み込んだファイルではありません。
 93	これ以上ファイルを読み込むことができません。
 94	パスワードが間違っています。
-95	ファイルが読み込まれています。 
-96	ファイルが削除できません。 
+95	ファイルが読み込まれています。
+96	ファイルが削除できません。
 97	ファイルが作成出来ません。
 98	Ｗｎｎのファイルでありません。
 99	ファイルのI-nodeとFILE_UNIQを一致させる事ができません。

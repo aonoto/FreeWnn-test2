@@ -1,5 +1,5 @@
 /*
- * $Id: readfile.c,v 1.1 2000/01/16 05:07:45 ura Exp $
+ *  $Id: readfile.c,v 1.2 2001/06/14 17:55:36 ura Exp $
  */
 
 /*
@@ -10,13 +10,14 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+ * Copyright FreeWnn Project 1999, 2000
  *
- * Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
+ * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2, or (at your option)
- * any later version.
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -24,20 +25,10 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with GNU Emacs; see the file COPYING.  If not, write to the
- * Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- *
- * Commentary:
- *
- * Change log:
- *
- * Last modified date: 8,Feb.1999
- *
- * Code:
- *
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-/*	Version 4.0
- */
+
 /*
   (Updatable, Stable) dictionary read routine.
 */
@@ -114,9 +105,6 @@ struct wnn_file *wf;
     case  WNN_FT_DICT_FILE:
 	wf->area = (char *)readdict(fp);
 	if(wf->area == NULL) goto ERROR_RET;
-	if(little_endian()){
-	    revdic((struct JT *)wf->area, 0);
-	}
 	break;
     case WNN_FT_HINDO_FILE:
 	wf->area = (char *)readhindo(fp);
@@ -259,6 +247,9 @@ FILE *fp;
     if(jt1->maxhontai == 0 && 
        (jt1->syurui == WNN_UD_DICT || jt1->syurui == WNN_STATIC_DICT)){
 	jt1->maxhontai = 4;
+    }
+    if(little_endian()){
+	revdic(jt1, 0);
     }
     jt1->dirty = 0;
     jt1->hdirty = 0;
@@ -742,6 +733,9 @@ struct JT *jt;
 	free(jt->ri1[D_KANJI]);
 	free(jt->ri2);
 	free(jt->node);
+#ifdef	CONVERT_by_STROKE
+	free(jt->bind);
+#endif	/* CONVERT_by_STROKE */
 	free(jt);
     }
     return(0);
@@ -863,6 +857,10 @@ struct JT *jt1;
     jt1->ri1[D_YOMI] = (struct rind1 *)NULL;
     jt1->ri1[D_KANJI] = (struct rind1 *)NULL;
     jt1->ri2 = (struct rind2 *)NULL;
+    jt1->node = (struct wnn_hinsi_node *)NULL;
+#ifdef	CONVERT_by_STROKE
+    jt1->bind = (struct b_node *)NULL;
+#endif	/* CONVERT_by_STROKE */
     if(((jt1->hindo = (UCHAR *)malloc(jt1->bufsize_serial)) == NULL) ||
        ((jt1->hinsi = (unsigned short *)(malloc(jt1->bufsize_serial * sizeof(short)))) == NULL) ||
 #ifdef	CONVERT_with_SiSheng

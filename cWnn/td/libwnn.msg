@@ -1,40 +1,37 @@
 #
-# $Id: libwnn.msg,v 1.1.2.1 1999/02/08 05:34:39 yamasita Exp $
+#   $Id: ./libwnn.msg $
 #
 
-### FreeWnn is a network-extensible Kana-to-Kanji conversion system.
-### This file is part of FreeWnn.
-### 
-### Copyright Kyoto University Research Institute for Mathematical Sciences
-###                 1987, 1988, 1989, 1990, 1991, 1992
-### Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
-### Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
-###
-### Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
-###
-### This program is free software; you can redistribute it and/or modify
-### it under the terms of the GNU General Public License as published by
-### the Free Software Foundation; either version 2, or (at your option)
-### any later version.
-###
-### This program is distributed in the hope that it will be useful,
-### but WITHOUT ANY WARRANTY; without even the implied warranty of
-### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-### GNU General Public License for more details.
-###
-### You should have received a copy of the GNU General Public License
-### along with GNU Emacs; see the file COPYING.  If not, write to the
-### Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-###
-### Commentary:
-###
-### Change log:
-###
-### Last modified date: 8,Feb.1999
-###
+#
+# FreeWnn is a network-extensible Kana-to-Kanji conversion system.
+# This file is part of FreeWnn.
+# 
+# Copyright Kyoto University Research Institute for Mathematical Sciences
+#                 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
+# Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
+# Copyright FreeWnn Project 1999, 2000
+# 
+# Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
 
-###	massage file for libwnn.a
-### wnnerrmsg.c
+#
+#	massage file for libwnn.a
+# wnnerrmsg.c
 #0	no_error 0
 1	ÅÆÇµÄâÇôÇã¡¤
 #2	no_error 2
@@ -60,7 +57,7 @@
 #22	no_error 22
 #23	no_error 23
 24	ÅÆÎÎÅÆÇµÎûÄùÕ©ÄâÆßíý
-25	áðóéâ¤ÍÌæÀî£Ü¬Ú¦hinsi.dataÄâÆßíý¡¤
+25	áðóéâ¤ÍÌæÀî£Ü¬Ú¦cixing.dataÄâÆßíý¡¤
 26	ÆÜÌùåøÎûâ¤ÍÌ¡£ÌùåøÄ§Ð©ê¦â¤ÍÌ¡¤
 27	ÅÆÎÎÅÆÇµÄâ×äûôÌ½¡¤
 #28	no_error 28
@@ -70,7 +67,7 @@
 32	Ïáúèë£æØÎµÙÑÄâÙÜ¡¤
 #33	no_error 33
 34	È¹ÏìæÐÙÑÄâÙÜ¡¤
-35	ÏìæÐ 1Ô¶Ä¾ÊôÈ´ 
+35	ÏìæÐ 1Ô¶Ä¾ÊôÈ´
 #36	no_error 36
 #37	no_error 37
 #38	no_error 38
@@ -130,8 +127,8 @@
 92	ÄâÑÒ¤Ý¤ñ¤è¤èÆîÅÂÆ«ûôÌ½ÎûÅÆÇµ¡¤
 93	ÅèÄ¸ÎûÅÆÇµÄâ×äûôÌ½¡¤
 94	passwordÄâè×¡¤
-95	ÅÆÇµÆßÇãûôÌ½¡¤ 
-96	ÅÆÇµÄâ×äÖ¼Øæ¡¤ 
+95	ÅÆÇµÆßÇãûôÌ½¡¤
+96	ÅÆÇµÄâ×äÖ¼Øæ¡¤
 97	ÅÆÇµÊôÈ´Þ¶ÐúÅøËô¡¤
 98	ÄâÑÒ¤Ã¤×¤è¤èÎûÅÆÇµ¡¤
 99	ÅÆÇµÎûI-nodeÌÏFILE_UNIQÄâ×äÄ¡Ó³¡¤
