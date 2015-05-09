@@ -1,3 +1,18 @@
+Sun, 10 May 2015 06:23:38 Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* ChangeLog, ChangeLog.en: added this messages.
+
+	* Wnn/include/jlib_private.h: renamed from
+	Wnn/include/jlib_hide.h
+	* Wnn/jutil/wnnstat.c:
+	* Wnn/jutil/wnnkill.c:
+	* Wnn/jlib/jl.c:
+	* Wnn/jlib/js.c:
+	* cWnn/include/Makefile.in (LINKS3):
+	(jlib_private.h):
+	* kWnn/include/Makefile.in (LINKS3):
+	(jlib_private.h):
+
 Tue,  3 Sep 2013 11:40:33 Mitsutoshi NAKANO <bkbin005@rinku.zaq.ne.jp>
 
 	* ChangeLog.en ChangeLog: 
