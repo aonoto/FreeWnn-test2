@@ -1,5 +1,5 @@
 /*
- *  $Id: jllib.h,v 1.7 2013/09/02 11:01:39 itisango Exp $
+ *  $Id: jllib.h,v 1.8 2015/05/10 01:39:27 itisango Exp $
  */
 
 /*
@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2008
+ * Copyright FreeWnn Project 1999, 2000, 2008, 2015
  *
  * Maintainer:  FreeWnn Project
  *
@@ -122,8 +122,8 @@ struct wnn_buf
 #define WNN_UNIQ 1
 #define WNN_NO_UNIQ  0
 
-#define WNN_NO_CREATE 0
-#define WNN_CREATE (-1)
+#define WNN_NO_CREATE ((int (*)(const char *)) 0)
+#define WNN_CREATE ((int (*)(const char *)) -1)
 
 #define WNN_DIC_PRIO_DEFAULT 5
 

@@ -1,5 +1,5 @@
 /*
- *  $Id: jl.c,v 1.16 2015/05/09 23:42:04 itisango Exp $
+ *  $Id: jl.c,v 1.17 2015/05/10 01:39:27 itisango Exp $
  */
 
 /*
@@ -1523,7 +1523,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
           jl_disconnect (env);
           return (-1);
         }
-      if (error_handler == (int (*) (const char *)) WNN_NO_CREATE || (rw == WNN_DIC_RDONLY))
+      if (error_handler == WNN_NO_CREATE || (rw == WNN_DIC_RDONLY))
         {
           sprintf (tmp, "%s \"%s\" %s", msg_get (wnn_msg_cat, 200, NULL, env->lang), dic_name, msg_get (wnn_msg_cat, 201, NULL, env->lang));
           /*
@@ -1537,7 +1537,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
       /*
          "辞書ファイル \"%s\" が無いよ。作る?(Y/N)",
        */
-      if (error_handler == (int (*) (const char *)) WNN_CREATE || call_error_handler (error_handler, tmp))
+      if (error_handler == WNN_CREATE || call_error_handler (error_handler, tmp))
         {
           if (create_file (env, dic_name, JISHO, -1,    /* -1 is dummy */
                            pwd_dic, (hindo_name && *hindo_name) ? "" : pwd_hindo, error_handler, message_handler) == -1)
@@ -1562,7 +1562,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
               jl_disconnect (env);
               return (-1);
             }
-          if (error_handler == (int (*) (const char *)) WNN_NO_CREATE || (hrw == WNN_DIC_RDONLY))
+          if (error_handler == WNN_NO_CREATE || (hrw == WNN_DIC_RDONLY))
             {
               sprintf (tmp, "%s \"%s\" %s", msg_get (wnn_msg_cat, 203, NULL, env->lang), hindo_name, msg_get (wnn_msg_cat, 201, NULL, env->lang));
               /*
@@ -1576,7 +1576,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
           /*
              "頻度ファイル \"%s\" が無いよ。作る?(Y/N)",
            */
-          if (error_handler == (int (*) (const char *)) WNN_CREATE || call_error_handler (error_handler, tmp))
+          if (error_handler == WNN_CREATE || call_error_handler (error_handler, tmp))
             {
               if (create_file (env, hindo_name, HINDO, fid, "", pwd_hindo, error_handler, message_handler) == -1)
                 return (-1);
@@ -1605,7 +1605,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
         }
       else if (wnn_errorno == WNN_HINDO_NO_MATCH)
         {
-          if (error_handler == (int (*) (const char *))  WNN_NO_CREATE)
+          if (error_handler == WNN_NO_CREATE)
             {
               return (-1);
             }
@@ -1613,7 +1613,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
           /*
              "辞書と頻度 \"%s\" の整合性が無いよ。作り直す?(Y/N)",
            */
-          if (!(error_handler == (int (*) (const char *)) WNN_CREATE || call_error_handler (error_handler, tmp)))
+          if (!(error_handler == WNN_CREATE || call_error_handler (error_handler, tmp)))
             {
               return (-1);
             }
@@ -1621,7 +1621,7 @@ jl_dic_add_e (env, dic_name, hindo_name, rev, prio, rw, hrw, pwd_dic, pwd_hindo,
             if_dead_disconnect (env, -1);
           if (file_remove (env->js_id, hindo_name, hpwd) == -1)
             if_dead_disconnect (env, -1);
-          if (create_file (env, hindo_name, HINDO, fid, NULL, pwd_hindo, (int (*) (const char *)) WNN_CREATE, message_handler) == -1)
+          if (create_file (env, hindo_name, HINDO, fid, NULL, pwd_hindo, WNN_CREATE, message_handler) == -1)
             return (-1);
           if ((hfid = file_read (env, hindo_name)) == -1)
             if_dead_disconnect (env, -1);
@@ -2759,11 +2759,11 @@ jl_set_env_wnnrc (env, wnnrc_n, error_handler, message_handler)
   int level = 0;
   int x;
   wnn_errorno = 0;
-  if (error_handler == (int (*) (const char *)) WNN_CREATE)
+  if (error_handler == WNN_CREATE)
     {
       confirm_state = CREATE_WITHOUT_CONFIRM;
     }
-  else if (error_handler == (int (*) (const char *)) WNN_NO_CREATE)
+  else if (error_handler == WNN_NO_CREATE)
     {
       confirm_state = NO_CREATE;
     }
@@ -2858,11 +2858,11 @@ jl_set_env_wnnrc1 (env, wnnrc_n, error_handler, message_handler, level)
           else if (confirm_state == CREATE_WITHOUT_CONFIRM)
             {
 
-              error_handler1 = (int (*) (const char *)) WNN_CREATE;
+              error_handler1 = WNN_CREATE;
             }
           else if (confirm_state == NO_CREATE)
             {
-              error_handler1 = (int (*) (const char *)) WNN_NO_CREATE;
+              error_handler1 = WNN_NO_CREATE;
             }
           if (jl_dic_add_e (env, s[0], s[1], rev, prio, rdonly, hrdonly, s[5], s[6], error_handler1, message_handler) == -1 && wnn_errorno != 0)
             {
@@ -3290,7 +3290,7 @@ make_dir1 (env, dirname, error_handler, message_handler)
           return (0);           /* dir already exists */
         }
     }
-  if (error_handler != (int (*) (const char *)) WNN_CREATE)
+  if (error_handler != WNN_CREATE)
     {
       sprintf (gomi, "%s \"%s\" %s%s", msg_get (wnn_msg_cat, 210, NULL, env->lang), dirname, msg_get (wnn_msg_cat, 201, NULL, env->lang), msg_get (wnn_msg_cat, 202, NULL, env->lang));
       /*

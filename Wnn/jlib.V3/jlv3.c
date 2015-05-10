@@ -1,5 +1,5 @@
 /*
- *  $Id: jlv3.c,v 1.10 2013/09/02 11:01:39 itisango Exp $
+ *  $Id: jlv3.c,v 1.11 2015/05/10 01:39:28 itisango Exp $
  */
 
 /*
@@ -10,7 +10,7 @@
  *                 1987, 1988, 1989, 1990, 1991, 1992
  * Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
  * Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
- * Copyright FreeWnn Project 1999, 2000, 2002
+ * Copyright FreeWnn Project 1999, 2000, 2002, 2015
  *
  * Maintainer:  FreeWnn Project   <freewnn@tomo.gr.jp>
  *
@@ -355,7 +355,7 @@ jd_dicadd (fn, fn1, prio, hrdonly)
            /* READ ONLY SD && hind file is none */
              (js_access (jl_env (buf), fn, 4) != -1) && (js_access (jl_env (buf), fn1, 4) == -1))
     {
-      if ((dic_no = jl_dic_add (buf, fn, fn1, WNN_DIC_ADD_NOR, prio, WNN_DIC_RDONLY, WNN_DIC_RW, NULL, NULL, (int (*) (const char *))WNN_CREATE, NULL)) < 0)
+      if ((dic_no = jl_dic_add (buf, fn, fn1, WNN_DIC_ADD_NOR, prio, WNN_DIC_RDONLY, WNN_DIC_RW, NULL, NULL, WNN_CREATE, NULL)) < 0)
         return (-1);
       if (jl_dic_delete (buf, dic_no) < 0)
         return (-1);
@@ -365,7 +365,7 @@ jd_dicadd (fn, fn1, prio, hrdonly)
     {
       rdonly = WNN_DIC_RDONLY;
     }
-  if ((dic_no = jl_dic_add (buf, fn, fn1, WNN_DIC_ADD_NOR, prio, rdonly, hrdonly, NULL, NULL, (int (*) (const char *))WNN_CREATE, NULL)) < 0)
+  if ((dic_no = jl_dic_add (buf, fn, fn1, WNN_DIC_ADD_NOR, prio, rdonly, hrdonly, NULL, NULL, WNN_CREATE, NULL)) < 0)
     /*   pw_d  pw_h  err   mes */
     return (-1);
   if (js_dic_info (jl_env (buf), dic_no, &ret) < 0)

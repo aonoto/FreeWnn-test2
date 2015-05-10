@@ -3,13 +3,26 @@
   Japanese...
  */
 
+Sun, 10 May 2015 09:05:43 Mitsutoshi NAKANO  <ItSANgo@gmail.com>
+
+	* ChangeLog, ChangeLog.en: added this messages.
+
+	* Wnn/include/jllib.h (WNN_NO_CREATE): redefined 0 -> pointer.
+	* Wnn/include/jllib.h (WNN_CREATE): redefined -1 -> pointer.
+	See:
+	https://sourceforge.jp/projects/freewnn/lists/archive/users/2015-May/000278.html
+	* Wnn/jlib/jl.c (jl_dic_add_e):
+	(jl_set_env_wnnrc):
+	* Wnn/jlib.V3/jlv3.c (jd_dicadd):
 
 Sun, 10 May 2015 06:23:38 Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
 	* ChangeLog, ChangeLog.en: added this messages.
 
 	* Wnn/include/jlib_private.h: renamed from
-	Wnn/include/jlib_hide.h
+	Wnn/include/jlib_hide.h.
+	See:
+	https://sourceforge.jp/projects/freewnn/lists/archive/users/2015-May/000278.html
 	* Wnn/jutil/wnnstat.c:
 	* Wnn/jutil/wnnkill.c:
 	* Wnn/jlib/jl.c:
