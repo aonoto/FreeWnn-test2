@@ -27,6 +27,22 @@ Sun, 10 May 2015 06:23:38 Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 	* kWnn/include/Makefile.in (LINKS3):
 	(jlib_private.h):
 
+Fri, 22 Nov 2013 19:53:01  Tomoki AONO <aonoto at users.sourceforge.jp>
+
+	* Wnn/pubdicplus/Makefile.in:
+
+	Revert contents of FZK_SRC not to install fzk.master-.c .
+
+Sat,  9 Nov 2013 03:54:44  Tomoki AONO <aonoto at users.sourceforge.jp>
+
+	* Wnn/pubdicplus/Makefile.in:
+
+	- Add another dependency (*.fsrc) to *.fzk file.
+	  It may remove bottleneck (full.fzk) in parallel build
+	  (ex. Debian Bug #724058).
+
+	- Remove redundant (auto-generated) dependency in includes / clean target.
+
 Tue,  3 Sep 2013 11:40:33 Mitsutoshi NAKANO <bkbin005@rinku.zaq.ne.jp>
 
 	* ChangeLog.en ChangeLog: 
@@ -126,8 +142,18 @@ Mon,  2 Sep 2013 19:18:00 Mitsutoshi NAKANO <bkbin005@rinku.zaq.ne.jp>
 	Added signal handler .
 	Server's exit status changed .
 
+Sat, 24 Aug 2013 23:24:31  Tomoki AONO <aonoto at users.sourceforge.jp>
 
-Mon,  5 Aug 2013 03:50:00  Tomoki AONO <aonoto at users.sourceforge.jp>
+	* configure, configure.in, Wnn/include/commonhd.h,
+	  Wnn/jserver/de_header.h:
+
+	- Update version string.
+
+	- Use PACKAGE_STRING instead of _SERVER_VERSION in jserver.
+
+Mon,  5 Aug 2013 03:45:01  Tomoki AONO <aonoto at users.sourceforge.jp>
+
+	* ChangeLog, ChangeLog.en, configure, configure.in:
 
 	Update ChangeLog entry and version string. Added 1.1.1-a022 tag.
 
