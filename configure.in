@@ -1,5 +1,5 @@
 dnl
-dnl   $Id: configure.in,v 1.59 2013/08/24 14:24:31 aonoto Exp $
+dnl   $Id: configure.in,v 1.60 2015/05/17 17:24:59 aonoto Exp $
 dnl
 
 dnl
@@ -12,7 +12,7 @@ dnl Copyright OMRON Corporation. 1987, 1988, 1989, 1990, 1991, 1992, 1999
 dnl Copyright ASTEC, Inc. 1987, 1988, 1989, 1990, 1991, 1992
 dnl Copyright FreeWnn Project
 dnl                 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
-dnl                 2010, 2011, 2013
+dnl                 2010, 2011, 2013, 2015
 dnl 
 dnl Maintainer:  FreeWnn Project
 dnl 
@@ -34,7 +34,7 @@ dnl
 dnl
 dnl Process this file with autoconf to produce a configure script.
 dnl
-AC_INIT(FreeWnn, [1.1.1-cvs-a023], [freewnn-users-owner@lists.sourceforge.jp], FreeWnn)
+AC_INIT(FreeWnn, [1.1.1-a023], [freewnn-users-owner@lists.osdn.me], FreeWnn)
 AC_CONFIG_SRCDIR(Wnn/conv/cvt_head.h)
 dnl old-style AC_INIT ...
 dnl AC_INIT(Wnn/conv/cvt_head.h)

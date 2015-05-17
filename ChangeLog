@@ -3,6 +3,21 @@
   Japanese...
  */
 
+Mon, 18 May 2015 02:25:00  Tomoki AONO <aonoto at users.osdn.me>
+
+	* ChangeLog, ChangeLog.en, configure, configure.in:
+
+	- Update ChangeLog entry and version string. Added 1.1.1-a023 tag.
+
+	- OSDN.jpへのサイト名変更に伴い、AC_INITのbug-reportアドレスの
+	  ドメイン部を変更。
+
+Sun, 17 May 2015 01:10:08  Tomoki AONO <aonoto at users.osdn.me>
+
+	* ChangeLog, ChangeLog.en:
+
+	Document changes by aonoto.
+
 Sun, 10 May 2015 09:05:43 Mitsutoshi NAKANO  <ItSANgo@gmail.com>
 
 	* ChangeLog, ChangeLog.en: added this messages.
